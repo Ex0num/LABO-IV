@@ -1,0 +1,34 @@
+<fieldset id="fieldsetMayor">
+  <legend>Calculo de promedio y suma</legend>
+
+  <div>
+    <!-- Recibo las 2 edades. -->
+    <input type="number" [(ngModel)] = "edadUno" id="edadUno">
+    <input type="number" [(ngModel)] = "edadDos" id="edadDos">
+
+    <input type="submit" (click)="this.calcularEdades()" value="Calcular" id="btnCalcular">
+    <input type="button" (click)="this.limpiarEdades()" value="Limpiar edades" id="btnLimpiar">
+  </div>
+  
+  <div id="resultados">
+    <label id="lblPromedioCalculado" hidden>Promedio</label>
+    <input type="text" hidden id="promedioCalculado" readonly value="Promedio Calculado">
+  
+    <label id="lblSumaCalculada" hidden>Suma</label>
+    <input type="text" hidden id="sumaCalculada" readonly value="Suma Calculada">  
+  </div>
+  
+</fieldset>
+
+<!-- <fieldset id="fieldsetLogin">
+  <legend>Login</legend>
+
+  <input type="text" id="nombreIngresado">
+  <input type="password" id="claveIngresada">
+
+  ----Hay que desarrollar el metodo 'logear'-----
+  <input type="button" (click)="this.Logear()" value="Limpiar edades" id="btnLimpiar">
+
+</fieldset> -->
+
+<router-outlet></router-outlet>
