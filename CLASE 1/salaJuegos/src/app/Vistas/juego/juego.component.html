@@ -1,0 +1,25 @@
+<!-- llamo con la doble llave a un elemento (en este caso una variable) 
+    del js (Esto se llama interpolacion) -->
+<p>{{this.nombre}}</p>
+
+<!-- <input type="text" value="{{this.nombre}}"> -->
+<!-- <input type="text" [value]= "apellido"> -->
+
+<!-- ESTO VA A IR DEL TS AL HTML Y LO QUE SE MODIFIQUE AL HTML VA A IR AL TS
+
+    [] del ts al html
+    () del html al ts 
+
+-->
+
+<!-- LE PUEDO SETEAR EL VALOR QUE YO QUIERA O MISMO TRAERLO DE UN CAMPO DE OTRO OBJETO -->
+<!-- <input type="text" [(ngModel)] = "nombre">
+<input type="text" [(ngModel)] = "apellido"> -->
+
+<!-- Me tengo en cuenta los campos del usuario -->
+<input type="text" [(ngModel)] = "usuario.nombre">
+<input type="text" [(ngModel)] = "usuario.apellido">
+
+<br>
+<!-- <input type="button" (click)="this.aceptar()" value="Aceptar">  -->
+<input type="button" (click)="usuario.mostrar()" value="Aceptar"> 
